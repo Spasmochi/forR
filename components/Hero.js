@@ -80,7 +80,7 @@ const TextSection = styled.div`
     font-size: 2.25rem;
     line-height: 2.5rem;
     & > span {
-      color: #123b5f;
+      color: #04ab37;
     }
     & > br {
       @media (min-width: 1024px) {

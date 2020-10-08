@@ -44,6 +44,9 @@ const BlockQuote = styled.blockquote`
     font-size: 1.25rem;
     color: #6b7280;
   }
+  & span {
+    color: #123b5f;
+  }
 `;
 
 export const Quote = ({ props }) => {
