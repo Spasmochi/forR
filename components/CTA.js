@@ -87,7 +87,6 @@ export const CTA = ({ props }) => {
     cta2: ctadata.cta2_label,
     cta2_url: ctadata.cta2.url,
   };
-  console.log(data);
   return (
     <Wrapper>
       <h2>{data.title}</h2>
