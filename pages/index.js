@@ -1,15 +1,20 @@
 import Head from "next/head";
 import { Container } from "../layout/Container";
 import { Client } from "../utils/prismic";
+import { Hero } from "../components/";
 
 export default function Home(props) {
   console.log(props);
+
   return (
     <Container>
       <Head>
         <title>Case Study | Marley Spoon </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <main>
+        <Hero props={props.doc.results[0].data.hero[0]} />
+      </main>
     </Container>
   );
 }
