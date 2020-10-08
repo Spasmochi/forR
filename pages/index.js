@@ -1,14 +1,13 @@
 import Head from "next/head";
+import { Container } from "../layout/Container";
 
 export default function Home() {
   return (
-    <div>
+    <Container>
       <Head>
-        <title>Create Next App</title>
+        <title>Case Study | Marley Spoon</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main></main>
-    </div>
+    </Container>
   );
 }
