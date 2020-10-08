@@ -29,7 +29,6 @@ const Content = styled.div`
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1280px;
 `;
 
 const Grid = styled.div`

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container } from "../layout/Container";
 import { Client } from "../utils/prismic";
-import { Hero } from "../components/";
+import { Hero, Quote } from "../components/";
 
 export default function Home(props) {
   console.log(props);
@@ -14,6 +14,7 @@ export default function Home(props) {
       </Head>
       <main>
         <Hero props={props.doc.results[0].data.hero[0]} />
+        <Quote props={props.doc.results[0].data.quote} />
       </main>
     </Container>
   );
