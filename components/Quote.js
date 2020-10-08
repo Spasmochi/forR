@@ -38,7 +38,7 @@ const BlockQuote = styled.blockquote`
     height: 48px;
     width: 56px;
     background-size: cover;
-    background-image: url(https://api.iconify.design/si-glyph:quote-open.svg);
+    background-image: url(https://api.iconify.design/mdi:format-quote-open.svg);
   }
   & p {
     font-size: 1.25rem;

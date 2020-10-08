@@ -3,7 +3,6 @@ import styled from "styled-components";
 // Layouts
 const WrapperOuter = styled.div`
   position: relative;
-  background-color: white;
   overflow: hidden;
 `;
 
@@ -128,7 +127,7 @@ const CTA = styled.div`
     font-weight: 500;
   }
 
-  & > button {
+  button {
     @media (min-width: 640px) {
       display: inline-flex;
       width: auto;
