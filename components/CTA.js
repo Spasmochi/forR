@@ -24,6 +24,8 @@ const Wrapper = styled.div`
   text-align: center;
   margin-right: auto;
   justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   & div {
     display: flex;
     justify-content: center;
@@ -69,7 +71,7 @@ const SecButton = styled(Button)`
   background-image: none;
   &:hover {
     background-color: #c9cfde;
-
+    color: #fff;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
   }
 `;
@@ -79,12 +81,12 @@ export const CTA = ({ props }) => {
   const data = {
     title: ctadata.title[0].text,
     sub: ctadata.subtitle[0].text,
-    cta1: ctadata.cta1,
+    cta1: ctadata.cta1_label,
     cta1_url: ctadata.cta1_url,
-    cta2: ctadata.cta2,
-    cta2_url: ctadata.cta2_url,
+    cta2: ctadata.cta2_label,
+    cta2_url: ctadata.cta2.url,
   };
-  console.log(data);
+  console.log(props);
   return (
     <Wrapper>
       <h2>{data.title}</h2>
@@ -95,14 +97,14 @@ export const CTA = ({ props }) => {
             data.cta2.url;
           }}
         >
-          Submit
+          {data.cta1}
         </Button>
         <SecButton
           onClick={() => {
             data.cta2.url;
           }}
         >
-          Submit
+          {data.cta2}
         </SecButton>
       </div>
     </Wrapper>
