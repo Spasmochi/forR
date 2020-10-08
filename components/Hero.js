@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 // Layouts
 const WrapperOuter = styled.div`
@@ -127,7 +128,7 @@ const CTA = styled.div`
     font-weight: 500;
   }
 
-  button {
+  a {
     @media (min-width: 640px) {
       display: inline-flex;
       width: auto;
@@ -234,9 +235,9 @@ export const Hero = ({ props }) => {
               <Body>{hero.heroText}</Body>
               <CTA>
                 <p>{hero.heroCta}</p>
-                <button onClick={() => hero.btnLink} type="submit">
-                  {hero.btnLabel}
-                </button>
+                <Link href={hero.btnLink} prefetch={false}>
+                  <a type="submit">{hero.btnLabel}</a>
+                </Link>
               </CTA>
             </TextSection>
             <MediaSection>

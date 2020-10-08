@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 const Wrapper = styled.div`
   @media (min-width: 1024px) {
@@ -33,7 +34,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Button = styled.button`
+const Button = styled.a`
   @media (min-width: 640px) {
     display: inline-flex;
     width: auto;
@@ -86,26 +87,18 @@ export const CTA = ({ props }) => {
     cta2: ctadata.cta2_label,
     cta2_url: ctadata.cta2.url,
   };
-  console.log(props);
+  console.log(data);
   return (
     <Wrapper>
       <h2>{data.title}</h2>
       <h3>{data.sub}</h3>
       <div>
-        <Button
-          onClick={() => {
-            data.cta2.url;
-          }}
-        >
-          {data.cta1}
-        </Button>
-        <SecButton
-          onClick={() => {
-            data.cta2.url;
-          }}
-        >
-          {data.cta2}
-        </SecButton>
+        <Link href={data.cta2_url} passHref={true} prefetch={false}>
+          <Button>{data.cta1}</Button>
+        </Link>
+        <Link href={data.cta2_url} passHref={true} prefetch={false}>
+          <SecButton>{data.cta2}</SecButton>
+        </Link>
       </div>
     </Wrapper>
   );
